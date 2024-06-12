@@ -1,0 +1,20 @@
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.page-no {
+  margin-left: 10px;
+}
+
+.control-btn {
+  margin-left: 10px;
+  background-color: red;
+  color: #ffffff;
+  font-family: 'Roboto';
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
