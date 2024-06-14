@@ -54,20 +54,20 @@ const App = () => {
 
   const renderMoviesList = movies => {
     return (
-      <ul className='row p-0 ms-0 me-0 mt-3'>
+      <ul className="row p-0 ms-0 me-0 mt-3">
         {movies.map(movie => (
           <li
             key={movie.id}
-            className='col-6 col-md-3 col-lg-2 text-center p-2'
+            className="col-6 col-md-3 col-lg-2 text-center p-2"
           >
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
-              className='img-thumbnail'
+              className="img-thumbnail"
             />
             <h3>{movie.title}</h3>
             <p>Rating: {movie.vote_average}</p>
-            <button className='btn btn-primary'>View Details</button>
+            <button className="btn btn-primary">View Details</button>
           </li>
         ))}
       </ul>
@@ -76,7 +76,7 @@ const App = () => {
 
   const renderContent = () => {
     if (apiStatus === 'IN_PROGRESS') {
-      return <Loader type='ThreeDots' color='#000' height={80} width={80} />
+      return <Loader type="ThreeDots" color="#000" height={80} width={80} />
     }
     if (apiStatus === 'FAILURE') {
       return <div>Error occurred. Please try again.</div>
@@ -97,17 +97,17 @@ const App = () => {
   }
 
   return (
-    <div className='container'>
+    <div className="container">
       <header>
         <h1>movieDB</h1>
         <h2>Popular</h2>
         <h2>Top Rated</h2>
         <h2>Upcoming</h2>
       </header>
-      <div className='search-bar'>
+      <div className="search-bar">
         <input
-          type='text'
-          placeholder='Search for a movie...'
+          type="text"
+          placeholder="Search for a movie..."
           value={searchInput}
           onChange={e => setSearchInput(e.target.value)}
         />
